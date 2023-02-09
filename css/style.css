@@ -3,19 +3,32 @@
     padding: 0;
     box-sizing: border-box;
 }
+nav{
+    max-height: 50px;
+}
 body{
     background-color: black;
+    min-height: 300vh;
+    overflow-x: hidden;
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none; 
+}
+body::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
 }
 main{
-    top: -50px;
     width: 100%;
-    height: auto;
-    position: absolute;
+    height: 100vh;
+    position: relative;
     display: flex;
     justify-content: center;
 }
 video{
+    position: absolute;
+    display: block;
+    top: -120px;
+    left: 0;
     height: 50%;
-    width: 1000px;
+    width: 100vw;
     transform: rotate(180deg);
 }
