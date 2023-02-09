@@ -3,9 +3,19 @@
     padding: 0;
     box-sizing: border-box;
 }
+nav{
+    max-height: 50px;
+}
 body{
     background-color: black;
     position: relative;
+    min-height: 300vh;
+    overflow-x: hidden;
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none; 
+}
+body::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
 }
 main{
     width: 100%;
@@ -15,11 +25,8 @@ main{
     justify-content: center;
 }
 video{
-    top: -100px;
-    margin-right: 50px;
-    position: absolute;
     height: 50%;
-    width: 1000px;
+    width: 100vw;
     transform: rotate(180deg);
 }
   
