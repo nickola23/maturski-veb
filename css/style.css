@@ -8,6 +8,7 @@ nav{
 }
 body{
     background-color: black;
+    position: relative;
     min-height: 300vh;
     overflow-x: hidden;
     -ms-overflow-style: none;  /* Internet Explorer 10+ */
@@ -24,11 +25,49 @@ main{
     justify-content: center;
 }
 video{
-    position: absolute;
-    display: block;
-    top: -120px;
-    left: 0;
     height: 50%;
     width: 100vw;
     transform: rotate(180deg);
+}
+  
+.arrow, .arrow:before {
+    position: absolute;
+    left: 50%;
+}
+
+.arrow {
+    width: 20px;
+    height: 20px;
+    bottom: 10%;
+    margin: -20px 0 0 -20px;
+    transform: rotate(45deg);
+    border-left: none;
+    border-top: none;
+    border-right: 2px #fff solid;
+    border-bottom: 2px #fff solid;
+}
+  
+.arrow:before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    margin: -10px 0 0 -10px;
+    border-left: none;
+    border-top: none;
+    border-right: 1px #fff solid;
+    border-bottom: 1px #fff solid;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-name: arrow;
+}
+  
+@keyframes arrow {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: translate(-10px, -10px);
+    }
 }
