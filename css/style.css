@@ -34,10 +34,9 @@ video{
     bottom: 10%;
     margin: -20px 0 0 -20px;
     transform: rotate(45deg);
-    border-left: none;
-    border-top: none;
     border-right: 2px #fff solid;
     border-bottom: 2px #fff solid;
+    cursor: pointer;
 }
   
 .arrow:before {
@@ -46,8 +45,6 @@ video{
     height: 20px;
     top: 50%;
     margin: -10px 0 0 -10px;
-    border-left: none;
-    border-top: none;
     border-right: 1px #fff solid;
     border-bottom: 1px #fff solid;
     animation-duration: 2s;
