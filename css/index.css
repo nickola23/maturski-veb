@@ -12,14 +12,21 @@ section{
     height: auto;
     position: relative;
 }
-video{
-    position: absolute;
-    top: -120px;
-    height: 50%;
-    width: 100vw;
-    transform: rotate(180deg);
+
+#header{
+    min-height: calc(100vh - 50px);
 }
 
+video{
+    position: absolute;
+    height: 50%;
+    width: 100vw;
+}
+
+#sun{
+    top: -120px;
+    transform: rotate(180deg);
+}
 .arrow, .arrow:before {
     position: absolute;
     left: 50%;
@@ -28,7 +35,7 @@ video{
 .arrow {
     width: 20px;
     height: 20px;
-    bottom: 10%;
+    bottom: 50px;
     margin: -20px 0 0 -20px;
     transform: rotate(45deg);
     border-right: 2px #fff solid;
