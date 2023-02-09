@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Sora:wght@500;600&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+.navbar{
+    position: relative;
+    z-index: 999;
+    top: 0;
+}
+nav{
+    display : flex;
+    flex-direction: row;
+    justify-content: space-between;
+    user-select: none;
+    font-family: poppins, sans-serif;
+    font-weight: 500;
+    width: 100%;
+    padding-top: 10px;
+    padding-left: 5%;
+    padding-right: 5%;
+    z-index: 999;
+}
+nav a{
+    text-decoration: none;
+    color: #fff;
+}
+.navul{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin: 0;
+    padding-top: 0;
+}
+.navul li{
+    padding: 15px;
+}
+.navul li:hover{
+    cursor: pointer;
+}
+.navDrop{
+    display: none;
+    justify-content: center;
+    position: absolute;
+    user-select: none;
+    height: fit-content;
+    font-family: poppins, sans-serif;
+    background-color: white;
+    z-index: -1;
+    padding-bottom: 20px;
+    top: 55px;
+    width: 100%;
+    animation: to-bottom 0.5s forwards;
+}
+.navDropMain{
+    display: flex;
+    flex-direction: row;
+    min-width: 60%;
+    min-height: 100%;
+    padding-top: 10px;
+}
+.navDropContent{
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+    height: 100%;
+    margin: auto;
+}
+.navDropHeading{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    margin-left: 20px;
+    margin-bottom: 15px;
+    width: 100%;
+}
+.navDropHeading span{
+    font-size: 26px;
+}
+.navDropImg{
+    margin-right: 10px;
+    width: 40px;
+    height: 40px;
+}
+.navbar:has(#planets:hover) .navDrop, .navDrop:hover{
+    display: flex;
+}
+@keyframes to-bottom {
+    0% {
+        transform: translateY(-50%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
