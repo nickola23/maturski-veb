@@ -24,7 +24,7 @@ video{
 }
 
 #sun{
-    top: -120px;
+    top: -16vh;
     
     transform: rotate(180deg);
 }
