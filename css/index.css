@@ -13,6 +13,10 @@ section{
     position: relative;
 }
 
+#mercurySec{
+    align-items: center;
+}
+
 #header{
     min-height: calc(100vh - 50px);
 }
@@ -25,9 +29,9 @@ video{
 
 #sun{
     top: -16vh;
-    
     transform: rotate(180deg);
 }
+
 .arrow, .arrow:before {
     position: absolute;
     left: 50%;

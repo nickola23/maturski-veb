@@ -12,8 +12,8 @@ document.addEventListener('scroll', (event) =>{
     }else{
         sun.style.sunTop= `-16vh`
     }
-    let mercuryTop = (scroll*1.924-1635)*(962/innerHeight)*((962/1879)/(innerHeight/innerWidth));
-    let mercuryLeft = (scroll *0.9395-1503)*(962/innerHeight)*((962/1879)/(innerHeight/innerWidth));
-    mercury.style.top = `${mercuryTop}px`;
-    mercury.style.left = `${mercuryLeft}px`;
+    //let mercuryTop = (scroll*1.924-1635)*(962/innerHeight)*((962/1879)/(innerHeight/innerWidth));
+    //mercury.style.top = `${mercuryTop}px`;
+    let mercuryLeft = scroll / 30 - 60;
+    mercury.style.left = `${mercuryLeft}vw`;
 })
