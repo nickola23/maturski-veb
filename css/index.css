@@ -25,11 +25,16 @@ video{
     position: absolute;
     height: 50%;
     width: 100vw;
+    z-index: -1;
 }
 
 #sun{
     top: -16vh;
     transform: rotate(180deg);
+}
+
+#mercury{
+    top: 20vh;
 }
 
 .arrow, .arrow:before {

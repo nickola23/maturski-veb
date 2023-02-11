@@ -1,6 +1,5 @@
 const mercury = document.querySelector('#mercury');
 mercury.playbackRate = 0.84
-console.log((962/1879)/(innerHeight/innerWidth))
 const sun = document.querySelector('#sun')
 document.addEventListener('scroll', (event) =>{
     let scroll = window.scrollY;
@@ -15,5 +14,18 @@ document.addEventListener('scroll', (event) =>{
     //let mercuryTop = (scroll*1.924-1635)*(962/innerHeight)*((962/1879)/(innerHeight/innerWidth));
     //mercury.style.top = `${mercuryTop}px`;
     let mercuryLeft = scroll / 30 - 60;
-    mercury.style.left = `${mercuryLeft}vw`;
+    if(mercuryLeft < -24){
+        mercury.style.left = `${mercuryLeft}vw`;
+    }
+    else{
+        mercury.style.left = `-24vw`;
+    }
+    if(scroll > 300){
+        document.querySelector(`.navbar`).classList.add(`display`);
+    }
+    else{
+        document.querySelector(`.navbar`).classList.remove(`display`);
+    }
 })
+
+

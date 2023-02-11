@@ -9,7 +9,7 @@ body{
     padding: 0;
 }
 .navbar{
-    position: relative;
+    display: block;
     z-index: 999;
     top: 0;
 }
@@ -30,6 +30,7 @@ nav{
 nav a{
     text-decoration: none;
     color: #fff;
+    z-index: 999;
 }
 .navul{
     display: flex;
@@ -51,8 +52,8 @@ nav a{
     user-select: none;
     height: fit-content;
     font-family: poppins, sans-serif;
-    background-color: white;
-    z-index: -1;
+    background-color: #000;
+    z-index: 99;
     top: 50px;
     width: 100%;
     animation: to-bottom 0.5s forwards;
@@ -94,6 +95,12 @@ nav a{
 }
 .navbar:has(#planets:hover) .navDrop, .navDrop:hover{
     display: flex;
+}
+.display{
+    display: block;
+    position: fixed;
+    width: 100vw;
+    animation: to-bottom 1s;
 }
 @keyframes to-bottom {
     0% {
