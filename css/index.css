@@ -35,6 +35,7 @@ video{
 
 #mercury{
     top: 20vh;
+    transform: rotate(180deg);
 }
 
 .arrow, .arrow:before {
