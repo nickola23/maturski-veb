@@ -13,12 +13,27 @@ section{
     position: relative;
 }
 
-#mercurySec{
-    align-items: center;
-}
-
 #header{
     min-height: calc(100vh - 50px);
+    height: auto;
+}
+
+.title{
+    position: absolute;
+    width: 100%;
+    top: 30%;
+    text-align: center;
+    color: #fff;
+}
+
+h1{
+    font-size: 48px;
+    letter-spacing: 20px;
+    text-transform: uppercase;
+}
+
+#mercurySec{
+    align-items: center;
 }
 
 video{
