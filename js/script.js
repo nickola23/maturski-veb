@@ -22,18 +22,26 @@ window.addEventListener('scroll', (event) =>{
     let mercuryLeft = scroll / 30 - 60;
     if(scroll<window.innerHeight){
         mercury.style.left = `${mercuryLeft}vw`;
+    }else{
+        mercury.style.left = `${window.innerHeight / 30 - 60}vw`;
     }
     let earthLeft = (scroll - 2 * window.innerHeight) / 30 -60;
     if(scroll< 3 * window.innerHeight){
         earth.style.left = `${earthLeft}vw`;
+    }else{
+        earth.style.left = `${window.innerHeight / 30 - 60}vw`;
     }
     let jupiterLeft = (scroll - 4 * window.innerHeight) / 30 -60;
     if(scroll< 5 * window.innerHeight){
         jupiter.style.left = `${jupiterLeft}vw`;
+    }else{
+        jupiter.style.left = `${window.innerHeight / 30 - 60}vw`;
     }
     let uranusLeft = (scroll - 6 * window.innerHeight) / 30 -60;
     if(scroll< 7 * window.innerHeight){
         uranus.style.left = `${uranusLeft}vw`;
+    }else{
+        uranus.style.left = `${window.innerHeight / 30 - 60}vw`;
     }
     if(scroll > 300){
         document.querySelector(`.navbar`).classList.add(`display`);
@@ -44,23 +52,29 @@ window.addEventListener('scroll', (event) =>{
     let venusRight = (scroll-innerHeight) / 30 - 60;
     if(scroll<2*window.innerHeight){
         venus.style.right = `${venusRight}vw`;
+    }else{
+        venus.style.right = `${window.innerHeight / 30 - 60}vw`;
     }
-
 
     let marsRight = (scroll-3*innerHeight) / 30 - 60;
     if(scroll<4*window.innerHeight){
         mars.style.right = `${marsRight}vw`;
+    }else{
+        mars.style.right = `${window.innerHeight / 30 - 60}vw`;
     }
-
 
     let saturnRight = (scroll-5*innerHeight) / 30 - 60;
     if(scroll<6*window.innerHeight){
         saturn.style.right = `${saturnRight}vw`;
+    }else{
+        saturn.style.right = `${window.innerHeight / 30 - 60}vw`;
     }
 
     let neptuneRight = (scroll-7*innerHeight) / 30 - 60;
     if(scroll<8*window.innerHeight){
         neptune.style.right = `${neptuneRight}vw`;
+    }else{
+        neptune.style.right = `${window.innerHeight / 30 - 60}vw`;
     }
 })
 
