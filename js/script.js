@@ -1,7 +1,12 @@
 const mercury = document.querySelector('#mercury');
+const venus = document.querySelector('#venus');
+const mars = document.querySelector('#mars');
+const saturn = document.querySelector('#saturn');
+const neptune = document.querySelector('#neptune');
 mercury.playbackRate = 0.84
 const sun = document.querySelector('#sun')
-document.addEventListener('scroll', (event) =>{
+window.addEventListener('scroll', (event) =>{
+    event.preventDefault();
     let scroll = window.scrollY;
     let sunTop = ((scroll*0.057)-16)*(962/innerHeight)
     sun.style.left= `${-scroll/12*(962/innerHeight)}vw`;
@@ -23,11 +28,30 @@ document.addEventListener('scroll', (event) =>{
     else{
         document.querySelector(`.navbar`).classList.remove(`display`);
     }
+    let venusRight = (scroll-innerHeight) / 30 - 60;
+    if(scroll<2*window.innerHeight){
+        venus.style.right = `${venusRight}vw`;
+    }
+
+
+    let marsRight = (scroll-3*innerHeight) / 30 - 60;
+    if(scroll<4*window.innerHeight){
+        mars.style.right = `${marsRight}vw`;
+    }
+
+
+    let saturnRight = (scroll-5*innerHeight) / 30 - 60;
+    if(scroll<6*window.innerHeight){
+        saturn.style.right = `${saturnRight}vw`;
+    }
+
+    let neptuneRight = (scroll-7*innerHeight) / 30 - 60;
+    if(scroll<8*window.innerHeight){
+        neptune.style.right = `${neptuneRight}vw`;
+    }
 })
 
 
 document.querySelector('.arrow').addEventListener('click',() => {
-        console.log(window.innerHeight-(window.scrollY%window.innerHeight) +' height:' + window.innerHeight)
         window.scrollBy(0,window.innerHeight-(window.scrollY%window.innerHeight)-50)
 })
-
