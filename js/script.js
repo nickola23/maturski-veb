@@ -14,11 +14,8 @@ document.addEventListener('scroll', (event) =>{
     //let mercuryTop = (scroll*1.924-1635)*(962/innerHeight)*((962/1879)/(innerHeight/innerWidth));
     //mercury.style.top = `${mercuryTop}px`;
     let mercuryLeft = scroll / 30 - 60;
-    if(mercuryLeft < -24){
+    if(scroll<window.innerHeight){
         mercury.style.left = `${mercuryLeft}vw`;
-    }
-    else{
-        mercury.style.left = `-24vw`;
     }
     if(scroll > 300){
         document.querySelector(`.navbar`).classList.add(`display`);
@@ -28,4 +25,9 @@ document.addEventListener('scroll', (event) =>{
     }
 })
 
+
+document.querySelector('.arrow').addEventListener('click',() => {
+        console.log(window.innerHeight-(window.scrollY%window.innerHeight) +' height:' + window.innerHeight)
+        window.scrollBy(0,window.innerHeight-(window.scrollY%window.innerHeight)-50)
+})
 
