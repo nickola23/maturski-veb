@@ -14,7 +14,6 @@ section{
 }
 
 #header{
-    min-height: calc(100vh - 50px);
     height: auto;
 }
 
@@ -51,6 +50,11 @@ video{
 #mercury{
     top: 20vh;
     transform: rotate(180deg);
+}
+
+#earth{
+    top: 20vh;
+    height: 60%;
 }
 
 .arrow, .arrow:before {
