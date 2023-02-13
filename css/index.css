@@ -47,14 +47,20 @@ video{
     transform: rotate(180deg);
 }
 
-#mercury{
+section video {
     top: 20vh;
+}
+
+#mercury{
     transform: rotate(180deg);
 }
 
 #earth{
-    top: 20vh;
     height: 60%;
+}
+
+#saturn{
+    height: 80vh;
 }
 
 .arrow, .arrow:before {
