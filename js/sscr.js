@@ -613,7 +613,7 @@ function postScrollToParent(deltaX, deltaY) {
  ***********************************************/
 
 function addEvent(type, fn) {
-    window.addEventListener(type, fn, false);
+    window.addEventListener(type, fn, {passive:false});
 }
 
 function removeEvent(type, fn) {
@@ -646,9 +646,7 @@ function isTouchpad(deltaY) {
     deltaBuffer.push(deltaY);
     deltaBuffer.shift();
     clearTimeout(deltaBufferTimer);
-    deltaBufferTimer = setTimeout(function () {
-        chrome.storage.local.set({ deltaBuffer: deltaBuffer });
-    }, 1000);
+    
     var dpiScaledWheelDelta = deltaY > 120 && allDeltasDivisableBy(deltaY); // win64 
     return !allDeltasDivisableBy(120) && !allDeltasDivisableBy(100) && !dpiScaledWheelDelta;
 } 
