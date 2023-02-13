@@ -27,37 +27,12 @@ var scrolling = false; // guards one phase
 var isLinux = (navigator.platform.indexOf("Linux") != -1); 
 
 // get global settings
-chrome.storage.sync.get(defaultOptions, function (syncedOptions) {
-    options = syncedOptions;
-    // leave time for the main script to check excluded pages
-    setTimeout(function() {
-        // if we shouldn't run, stop listening to events
-        if (isExcluded && !options.middleMouse) {
-            cleanup();
-        }
-    }, 10);
-});
-
- 
-/**
- * Initializes the image at the reference point.
- */
-function init() {
-    var url = chrome.extension.getURL("../img/cursor.png");
-    var style = img.style;
-    style.background = "url("+url+") no-repeat";
-    style.position   = "fixed";
-    style.zIndex     = "1000";
-    style.width      = "20px";
-    style.height     = "20px";
-    new Image().src  = url; // force download
-}
 
 /**
  * Removes event listeners and other traces left on the page.
  */
 function cleanup() {
-    removeEvent("mousedown", mousedown);
+    window.removeEventListener("mousedown", mousedown);
 }
 
 /**
@@ -143,7 +118,7 @@ function mousedown(e) {
         var deltaY = Math.abs(refereceY - e.clientY);
         var movedEnough = Math.max(deltaX, deltaY) > 10; 
         if (firstMove && movedEnough) {
-            addEvent("mouseup", remove);
+            window.addEventListener("mouseup", remove);
             firstMove = false;
         }
         speedX = (e.clientX - refereceX) * 10 / 1000;
@@ -151,18 +126,18 @@ function mousedown(e) {
     }
     
     function remove(e) {
-        removeEvent("mousemove", mousemove);
-        removeEvent("mousedown", remove);
-        removeEvent("mouseup", remove);
-        removeEvent("keydown", remove);
+        window.removeEventListener("mousemove", mousemove);
+        window.removeEventListener("mousedown", remove);
+        window.removeEventListener("mouseup", remove);
+        window.removeEventListener("keydown", remove);
         document.body.removeChild(img);
         scrolling = false;
         finished  = true;
     }
     
-    addEvent("mousemove", mousemove);
-    addEvent("mousedown", remove);
-    addEvent("keydown", remove);
+    window.addEventListener("mousemove", mousemove);
+    window.addEventListener("mousedown", remove);
+    window.addEventListener("keydown", remove);
 }
 
 /**
@@ -174,7 +149,6 @@ var dateNow = (function () {
         : function () { return Date.now(); };
 })();
 
-addEvent("mousedown", mousedown);
-addEvent("DOMContentLoaded", init);
+window.addEventListener("mousedown", mousedown);
 
 })(window);

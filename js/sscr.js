@@ -59,14 +59,6 @@ var arrowKeys = { 37: 1, 38: 1, 39: 1, 40: 1 };
  * SETTINGS
  ***********************************************/
 
-chrome.storage.sync.get(defaultOptions, function (syncedOptions) {
-
-    options = syncedOptions;
-
-    // it seems that sometimes settings come late
-    // and we need to test again for excluded pages
-    initTest();
-});
 
 
 /***********************************************
@@ -671,11 +663,7 @@ function allDeltasDivisableBy(divisor) {
             isDivisible(deltaBuffer[2], divisor));
 }
 
-chrome.storage.local.get('deltaBuffer', function (stored) {
-    if (stored.deltaBuffer) {
-        deltaBuffer = stored.deltaBuffer;
-    }
-});
+
 
 function isInsideYoutubeVideo(event) {
     var elem = event.target;
