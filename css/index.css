@@ -8,13 +8,18 @@ main{
 }
 
 section{
+    display: flex;
     min-height: 100vh;
     height: auto;
     position: relative;
 }
 
-#header{
-    height: auto;
+.sectionStart{
+    justify-content: start;
+}
+
+.sectionEnd{
+    justify-content: end;
 }
 
 .title{
@@ -31,10 +36,6 @@ h1{
     text-transform: uppercase;
 }
 
-#mercurySec{
-    align-items: center;
-}
-
 video{
     position: absolute;
     height: 50%;
@@ -42,25 +43,13 @@ video{
     z-index: -1;
 }
 
-#sun{
-    top: -16vh;
-    transform: rotate(180deg);
-}
-
 section video {
     top: 20vh;
 }
 
-#mercury{
-    transform: rotate(180deg);
-}
-
-#earth{
-    height: 60%;
-}
-
-#saturn{
-    height: 80vh;
+.content{
+    height: 100vh;
+    width: 60%;
 }
 
 .arrow, .arrow:before {
@@ -74,6 +63,7 @@ section video {
     bottom: 50px;
     margin: -20px 0 0 -20px;
     transform: rotate(45deg);
+    border: none;
     border-right: 2px #fff solid;
     border-bottom: 2px #fff solid;
     cursor: pointer;
@@ -90,6 +80,23 @@ section video {
     animation-duration: 2s;
     animation-iteration-count: infinite;
     animation-name: arrow;
+}
+
+#sun{
+    top: -16vh;
+    transform: rotate(180deg);
+}
+
+#mercury{
+    transform: rotate(180deg);
+}
+
+#earth{
+    height: 60%;
+}
+
+#saturn{
+    height: 80vh;
 }
   
 @keyframes arrow {
