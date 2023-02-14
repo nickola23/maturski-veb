@@ -11,8 +11,8 @@ const sun = document.querySelector('#sun')
 window.addEventListener('scroll', (event) =>{
     event.preventDefault();
     let scroll = window.scrollY;
-    let sunTop = ((scroll*0.057)-16)*(962/innerHeight)
-    sun.style.left= `${-scroll/12*(962/innerHeight)}vw`;
+    let sunTop = ((scroll*0.057)-16)*(962/window.innerHeight)
+    sun.style.left= `${-scroll/12*(962/window.innerHeight)}vw`;
     sun.style.transform = `rotate(${180 - scroll*(innerHeight/962)/9}deg)`
     if(sunTop > -16){
         sun.style.sunTop= `${sunTop}vh`
@@ -83,3 +83,28 @@ document.querySelector('.arrow').addEventListener('click',() => {
         window.scrollBy(0,window.innerHeight-(window.scrollY%window.innerHeight))
 })
 
+const section = window.innerWidth/9.2;
+
+
+document.querySelector('.navDrop').addEventListener('click', e =>{
+    let mouseY = e.clientX;
+    const sectionNum = mouseY /section;
+    console.log(sectionNum,section,mouseY)
+    if(sectionNum<1){
+        mercury.parentNode.scrollIntoView(true,{behavior: "smooth"})
+    }else if(sectionNum<2){
+        venus.parentNode.scrollIntoView(true,{behavior: "smooth"})
+    }else if(sectionNum<3){
+        earth.parentNode.scrollIntoView(true,{behavior: "smooth"})
+    }else if(sectionNum<4){
+        mars.parentNode.scrollIntoView(true,{behavior: "smooth"})
+    }else if(sectionNum<5){
+        jupiter.parentNode.scrollIntoView(true,{behavior: "smooth"})
+    }else if(sectionNum<7.2){
+        saturn.parentNode.scrollIntoView(true,{behavior: "smooth"})
+    }else if(sectionNum<8.2){
+        uranus.parentNode.scrollIntoView(true,{behavior: "smooth"})
+    }else{
+        neptune.parentNode.scrollIntoView(true,{behavior: "smooth"})
+    }
+})
