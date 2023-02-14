@@ -48,8 +48,34 @@ section video {
 }
 
 .content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100vh;
     width: 60%;
+}
+
+.context{
+    width: 90%;
+    height: 60%;
+    border: 2px solid white;
+    position: relative;
+    border-radius: 20px;
+}
+
+.planetName{
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: -20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: max-content;
+    padding: 0px 0px 10px 10px;
+    font-size: 32px;
+    letter-spacing: 10px;
+    color: #fff;
+    background-color: black;
 }
 
 .arrow, .arrow:before {
