@@ -11,13 +11,13 @@ const sun = document.querySelector('#sun')
 window.addEventListener('scroll', (event) =>{
     event.preventDefault();
     let scroll = window.scrollY;
-    let sunTop = ((scroll*0.057)-16)*(962/window.innerHeight)
+    let sunTop = ((scroll/19)-16)*(962/window.innerHeight)
     sun.style.left= `${-scroll/12*(962/window.innerHeight)}vw`;
     sun.style.transform = `rotate(${180 - scroll*(innerHeight/962)/9}deg)`
     if(sunTop > -16){
-        sun.style.sunTop= `${sunTop}vh`
+        sun.style.top= `${sunTop}vh`
     }else{
-        sun.style.sunTop= `-16vh`
+        sun.style.top= `-16vh`
     }
     let mercuryLeft = scroll / 30 - 60;
     if(scroll<window.innerHeight){
