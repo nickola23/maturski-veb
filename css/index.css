@@ -108,9 +108,9 @@ section video {
     text-align: left;
 }
 
-.contextMainRight .contextFact span{
-    margin-left: 15px;
-    align-items: right;
+.contextDescLeft .contextFact span{
+    margin-right: 15px;
+    text-align: right;
 }
 
 .contextMainLeft{
@@ -138,13 +138,14 @@ section video {
     text-align: justify;
 }
 
-.contextDesc{
+.contextDescLeft, .contextDescRight{
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     height: auto;
     width: 60%;
     height: calc(100% - 60px);
-    margin: 30px 30px 0 0;
+    margin: 30px 30px 30px 0;
     margin-left: 10px;
 }
 
@@ -154,7 +155,8 @@ section video {
     justify-content: left;
     align-items: center;
     width: 100%;
-    margin-top: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     font-size: 18px;
     height: fit-content;
 }
