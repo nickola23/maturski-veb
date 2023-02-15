@@ -5,6 +5,9 @@
     scroll-behavior: smooth;
     color: #fff;
 }
+body, html {
+    overflow-x: hidden;
+    }
 body{
     background-color: black;
     position: relative;

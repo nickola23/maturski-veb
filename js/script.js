@@ -15,70 +15,69 @@ window.addEventListener('scroll', (event) =>{
     //==============planet animations===========================
     let sunTop = ((scroll/19)-16)*(962/window.innerHeight)
     sun.style.left= `${-scroll/12*(962/window.innerHeight)}vw`;
-    sun.style.transform = `rotate(${180 - scroll*(innerHeight/962)/9}deg)`
+    sun.style.transform = `rotate(${180 - scroll/9}deg)`
     if(sunTop > -16){
         sun.style.top= `${sunTop}vh`
     }else{
         sun.style.top= `-16vh`
     }
-    let mercuryLeft = scroll / 30 - 60;
+    let mercuryLeft = scroll*(962/window.innerHeight) / 30 - 60;
     if(scroll<window.innerHeight){
         mercury.style.left = `${mercuryLeft}vw`;
     }else{
-        mercury.style.left = `${window.innerHeight / 30 - 60}vw`;
+        mercury.style.left = `${window.innerHeight*(962/window.innerHeight) / 30 - 60}vw`;
     }
-    let earthLeft = (scroll - 2 * window.innerHeight) / 30 -60;
+    let earthLeft = (scroll- 2 * window.innerHeight)*(962/window.innerHeight) / 30 -60;
     if(scroll< 3 * window.innerHeight){
         earth.style.left = `${earthLeft}vw`;
     }else{
-        earth.style.left = `${window.innerHeight / 30 - 60}vw`;
+        earth.style.left = `${window.innerHeight*(962/window.innerHeight) / 30 - 60}vw`;
     }
-    let jupiterLeft = (scroll - 4 * window.innerHeight) / 30 -60;
+    let jupiterLeft = (scroll - 4 * window.innerHeight)*(962/window.innerHeight) / 30 -60;
     if(scroll< 5 * window.innerHeight){
         jupiter.style.left = `${jupiterLeft}vw`;
     }else{
-        jupiter.style.left = `${window.innerHeight / 30 - 60}vw`;
+        jupiter.style.left = `${window.innerHeight*(962/window.innerHeight) / 30 - 60}vw`;
     }
-    let uranusLeft = (scroll - 6 * window.innerHeight) / 30 -60;
+    let uranusLeft = (scroll - 6 * window.innerHeight)*(962/window.innerHeight) / 30 -60;
     if(scroll< 7 * window.innerHeight){
         uranus.style.left = `${uranusLeft}vw`;
     }else{
-        uranus.style.left = `${window.innerHeight / 30 - 60}vw`;
+        uranus.style.left = `${window.innerHeight*(962/window.innerHeight) / 30 - 60}vw`;
     }
-    let venusRight = (scroll-innerHeight) / 30 - 60;
+    let venusRight = (scroll-innerHeight)*(962/window.innerHeight) / 30 - 60;
     if(scroll<2*window.innerHeight){
         venus.style.right = `${venusRight}vw`;
     }else{
-        venus.style.right = `${window.innerHeight / 30 - 60}vw`;
+        venus.style.right = `${window.innerHeight*(962/window.innerHeight) / 30 - 60}vw`;
     }
 
-    let marsRight = (scroll-3*innerHeight) / 30 - 60;
+    let marsRight = (scroll-3*innerHeight)*(962/window.innerHeight) / 30 - 60;
     if(scroll<4*window.innerHeight){
         mars.style.right = `${marsRight}vw`;
     }else{
-        mars.style.right = `${window.innerHeight / 30 - 60}vw`;
+        mars.style.right = `${window.innerHeight*(962/window.innerHeight) / 30 - 60}vw`;
     }
 
-    let saturnRight = (scroll-5*innerHeight) / 30 - 60;
+    let saturnRight = (scroll-5*innerHeight)*(962/window.innerHeight) / 30 - 60;
     if(scroll<6*window.innerHeight){
         saturn.style.right = `${saturnRight}vw`;
     }else{
-        saturn.style.right = `${window.innerHeight / 30 - 60}vw`;
+        saturn.style.right = `${window.innerHeight*(962/window.innerHeight) / 30 - 60}vw`;
     }
 
-    let neptuneRight = (scroll-7*innerHeight) / 30 - 60;
+    let neptuneRight = (scroll-7*innerHeight)*(962/window.innerHeight) / 30 - 60;
     if(scroll<8*window.innerHeight){
         neptune.style.right = `${neptuneRight}vw`;
     }else{
-        neptune.style.right = `${window.innerHeight / 30 - 60}vw`;
+        neptune.style.right = `${window.innerHeight*(962/window.innerHeight) / 30 - 60}vw`;
     }
     //======================content animation================================
     
     
-
+ 
     contents.forEach(content =>{
         let contentPosition = content.getBoundingClientRect().top;
-        console.log(contentPosition,screenPosition)
         if(contentPosition <screenPosition){
             content.classList.add("animate");
         }
@@ -93,7 +92,7 @@ window.addEventListener('scroll', (event) =>{
 })
 
 
-//====================added nav drop click navigation ======================
+//====================nav drop click navigation ======================
 const section = window.innerWidth/9.2;
 
 document.querySelector('.navDrop').addEventListener('click', e =>{
