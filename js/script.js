@@ -6,11 +6,13 @@ const jupiter = document.querySelector('#jupiter');
 const saturn = document.querySelector('#saturn');
 const uranus = document.querySelector('#uranus');
 const neptune = document.querySelector('#neptune');
+const contents = document.querySelectorAll('.content');
 mercury.playbackRate = 0.84
 const sun = document.querySelector('#sun')
+let screenPosition = window.innerHeight/1.3;
 window.addEventListener('scroll', (event) =>{
-    event.preventDefault();
     let scroll = window.scrollY;
+    //==============planet animations===========================
     let sunTop = ((scroll/19)-16)*(962/window.innerHeight)
     sun.style.left= `${-scroll/12*(962/window.innerHeight)}vw`;
     sun.style.transform = `rotate(${180 - scroll*(innerHeight/962)/9}deg)`
@@ -43,12 +45,6 @@ window.addEventListener('scroll', (event) =>{
     }else{
         uranus.style.left = `${window.innerHeight / 30 - 60}vw`;
     }
-    if(scroll > 300){
-        document.querySelector(`.navbar`).classList.add(`display`);
-    }
-    else{
-        document.querySelector(`.navbar`).classList.remove(`display`);
-    }
     let venusRight = (scroll-innerHeight) / 30 - 60;
     if(scroll<2*window.innerHeight){
         venus.style.right = `${venusRight}vw`;
@@ -76,15 +72,29 @@ window.addEventListener('scroll', (event) =>{
     }else{
         neptune.style.right = `${window.innerHeight / 30 - 60}vw`;
     }
+    //======================content animation================================
+    
+    
+
+    contents.forEach(content =>{
+        let contentPosition = content.getBoundingClientRect().top;
+        console.log(contentPosition,screenPosition)
+        if(contentPosition <screenPosition){
+            content.classList.add("animate");
+        }
+    })
+    //======================navbar animation=============================
+    if(scroll > window.innerHeight/3){
+        document.querySelector(`.navbar`).classList.add(`display`);
+    }
+    else{
+        document.querySelector(`.navbar`).classList.remove(`display`);
+    }
 })
 
-document.querySelector('.arrow').addEventListener('click',() => {
-        console.log(window.innerHeight-(window.scrollY%window.innerHeight) +' height:' + window.innerHeight)
-        window.scrollBy(0,window.innerHeight-(window.scrollY%window.innerHeight))
-})
 
+//====================added nav drop click navigation ======================
 const section = window.innerWidth/9.2;
-
 
 document.querySelector('.navDrop').addEventListener('click', e =>{
     let mouseY = e.clientX;

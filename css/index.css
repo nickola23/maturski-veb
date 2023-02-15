@@ -22,6 +22,22 @@ section{
     justify-content: end;
 }
 
+
+.sectionEnd .content{
+    transform: translateX(80%);
+    opacity:0;
+    transition: 1s;
+}
+.sectionStart .content{
+    transform: translateX(-80%);
+    opacity:0;
+    transition: 1s;
+}
+
+.animate {
+    transform: translateX(0) !important;
+    opacity:1 !important;
+}
 .title{
     position: absolute;
     width: 100%;
