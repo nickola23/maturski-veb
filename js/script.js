@@ -92,7 +92,7 @@ window.addEventListener('scroll', (event) =>{
 })
 
 
-//====================nav drop click navigation ======================
+//====================nav drop click navigation======================
 const section = window.innerWidth/9.2;
 
 document.querySelector('.navDrop').addEventListener('click', e =>{
@@ -117,3 +117,13 @@ document.querySelector('.navDrop').addEventListener('click', e =>{
         neptune.parentNode.scrollIntoView(true,{behavior: "smooth"})
     }
 })
+//====================back to top======================
+
+    const toTop = document.querySelector(".to-top");
+    window.addEventListener("scroll", ()=>{
+      if (window.pageYOffset > window.innerHeight/3) {
+      toTop.classList.add("active");
+      }else {
+      toTop.classList.remove("active");
+      }
+    })
