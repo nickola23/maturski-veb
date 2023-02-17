@@ -12,7 +12,9 @@ const sun = document.querySelector('#sun')
 let screenPosition = window.innerHeight/1.3;
 window.addEventListener('scroll', (event) =>{
     let scroll = window.scrollY;
-    //==============planet animations===========================
+
+//============== planet animations ===========================
+
     let sunTop = ((scroll/19)-16)*(962/window.innerHeight)
     sun.style.left= `${-scroll/12*(962/window.innerHeight)}vw`;
     sun.style.transform = `rotate(${180 - scroll/9}deg)`
@@ -72,17 +74,16 @@ window.addEventListener('scroll', (event) =>{
     }else{
         neptune.style.right = `${window.innerHeight*(962/window.innerHeight) / 30 - 60}vw`;
     }
-    //======================content animation================================
+
+//====================== content animation ================================
     
-    
- 
     contents.forEach(content =>{
         let contentPosition = content.getBoundingClientRect().top;
         if(contentPosition <screenPosition){
             content.classList.add("animate");
         }
     })
-    //======================navbar animation=============================
+    //====================== navbar animation =============================
     if(scroll > window.innerHeight/3){
         document.querySelector(`.navbar`).classList.add(`display`);
     }
@@ -91,8 +92,8 @@ window.addEventListener('scroll', (event) =>{
     }
 })
 
+//==================== nav drop click navigation ======================
 
-//====================nav drop click navigation======================
 const section = window.innerWidth/9.2;
 
 document.querySelector('.navDrop').addEventListener('click', e =>{
@@ -117,7 +118,8 @@ document.querySelector('.navDrop').addEventListener('click', e =>{
         neptune.parentNode.scrollIntoView(true,{behavior: "smooth"})
     }
 })
-//====================back to top======================
+
+//==================== back to top ======================
 
     const toTop = document.querySelector(".to-top");
     window.addEventListener("scroll", ()=>{
