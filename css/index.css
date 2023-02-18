@@ -227,15 +227,45 @@ section video {
 }
 
 #mercury{
+    height: 30%;
+    top: 30vh;
     transform: rotate(180deg);
+}
+
+#venus{
+    height: 65%;
 }
 
 #earth{
     height: 60%;
 }
 
+#mars{
+    height: 40%;
+    top: 30vh;
+}
+
+#jupiter{
+    height: 90%;
+    top: 5vh;
+    margin-left: -10vw;
+}
+
 #saturn{
-    height: 80vh;
+    height: 100%;
+    top: 0;
+    margin-right: -10vh;
+    transform: rotate(-23deg);
+}
+
+#uranus{
+    top: 15vh;
+    height: 80%;
+}
+
+#neptune{
+    top: 25vh;
+    margin-right: -30vh;
 }
   
 @keyframes arrow {
