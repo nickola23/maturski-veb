@@ -1,3 +1,4 @@
+const sun = document.querySelector('#sun')
 const mercury = document.querySelector('#mercury');
 const venus = document.querySelector('#venus');
 const earth = document.querySelector('#earth');
@@ -6,10 +7,32 @@ const jupiter = document.querySelector('#jupiter');
 const saturn = document.querySelector('#saturn');
 const uranus = document.querySelector('#uranus');
 const neptune = document.querySelector('#neptune');
+
 const contents = document.querySelectorAll('.content');
+
 mercury.playbackRate = 0.84
-const sun = document.querySelector('#sun')
+
 let screenPosition = window.innerHeight/1.3;
+
+//==================== video play pause=====================
+const videos = document.querySelectorAll('video')
+videos.forEach((video) => {
+    video.playing = true;
+    if(!video.getBoundingClientRect().top > window.innerHeight || video.getBoundingClientRect().bottom >window.innerHeight){
+        if(video.playing){
+            video.pause();
+            video.playing = false;
+            console.log(`${video.id}- video paused`)
+        }
+    }else{
+        if(!video.playing){
+            video.play();
+            video.playing = true;
+            console.log(`${video.id}- video playing`)
+        }
+        
+    }
+})
 window.addEventListener('scroll', (event) =>{
     let scroll = window.scrollY;
 
@@ -90,6 +113,25 @@ window.addEventListener('scroll', (event) =>{
     else{
         document.querySelector(`.navbar`).classList.remove(`display`);
     }
+    //==================== video play pause=====================
+
+    videos.forEach((video) => {
+        
+        if(isInViewport(video)){
+            if(video.playing){
+                video.pause();
+                video.playing = false;
+                console.log(`${video.id}- video paused`)
+            }
+        }else{
+            if(!video.playing){
+                video.play();
+                video.playing = true;
+                console.log(`${video.id}- video playing`)
+            }
+            
+        }
+    })
 })
 
 //==================== nav drop click navigation ======================
@@ -117,6 +159,8 @@ document.querySelector('.navDrop').addEventListener('click', e =>{
     }else{
         neptune.parentNode.scrollIntoView(true,{behavior: "smooth"})
     }
+
+    
 })
 
 //==================== back to top ======================
@@ -129,3 +173,11 @@ document.querySelector('.navDrop').addEventListener('click', e =>{
       toTop.classList.remove("active");
       }
     })
+
+function isInViewport(element) {
+        const rect = element.getBoundingClientRect();
+        return (
+            rect.top > (window.innerHeight || document.documentElement.clientHeight) ||
+            rect.bottom <0
+        );
+    }
