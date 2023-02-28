@@ -181,6 +181,7 @@ function isInViewport(element) {
             rect.bottom <0
         );
     }
+    
 //=====================nav menu responsive=================== 
 let hidden = true;
 let navDrop = document.querySelector('.navul:has(#planets)');
