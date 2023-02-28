@@ -96,7 +96,6 @@ nav a{
     width: 100vw;
     animation: to-bottom 1s;
 }
-
 .nav-extend{
     display: none;
     flex-direction: column;
@@ -110,7 +109,6 @@ nav a{
     cursor: pointer;
     
 }
-
 .nav-extend div{
     width: 80%;
     height: 3px;
@@ -118,6 +116,92 @@ nav a{
     margin: 2px;
     background-color: #fff;
     border-radius: 2px;
+}
+footer{
+    width: 100vw;
+    position: relative;
+    height: fit-content;
+    text-align: center;
+    color: #fff;
+    font-family: poppins, sans-serif;
+    font-size: 18px;
+}
+.footerLinks{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+}
+.footerLink{
+    width: 100%;
+}
+.footerLink h6{
+    position: relative;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.footerLink h6::after{
+    content: "";
+    position: absolute;
+    bottom: -27px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    transition: all ease-in-out 0.2s;
+}
+.footerLink h6:hover:after{
+    left: 5%;
+    width: 90%;
+}
+.footerLink h6 a{
+    color: #fff;
+    text-decoration: none;;
+}
+footer hr{
+    margin-top: 25px;
+}
+.footerDesc{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.footerDesc p{
+    font-size: 16px;
+    width: 100%;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+footer .social{
+    font-size: 38px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.social a{
+    color: #fff;
+    margin: 15px;
+    text-decoration: none;
+}
+.copyright{
+    font-size: 16px;
+    text-align: center;
+    padding: 20px;
+}
+.copyright a{
+    color: #fff;
+    text-decoration: none;
 }
 
 @media only screen and (max-width:438px){

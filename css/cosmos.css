@@ -6,14 +6,22 @@ main{
     height: auto;
     position: relative;
 }
-
 section{
     display: flex;
     min-height: 100vh;
     height: auto;
     position: relative;
 }
-
+.contentMain, .contentDesc{
+    width: 40%;
+    height: 80vh;
+}
+.contentMain{
+    background-color: aqua;
+}
+.contentDesc{
+    background-color: hotpink;
+}
 .title{
     position: absolute;
     width: 100%;
@@ -21,26 +29,22 @@ section{
     text-align: center;
     color: #fff;
 }
-
 h1{
     font-size: 48px;
     letter-spacing: 20px;
     text-transform: uppercase;
 }
-
 #header{
-    background-image:linear-gradient(180deg, #000000a8, #000000), url(../images/cosmos.jpg);
+    background-image:linear-gradient(180deg, #00000067, #000000), url(../images/cosmos.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-color: black;
 }
-
 .arrow, .arrow:before {
     position: absolute;
     left: 50%;
 }
-
 .arrow {
     width: 20px;
     height: 20px;
@@ -52,7 +56,6 @@ h1{
     border-bottom: 2px #fff solid;
     cursor: pointer;
 }
-  
 .arrow:before {
     content: "";
     width: 20px;
@@ -65,7 +68,6 @@ h1{
     animation-iteration-count: infinite;
     animation-name: arrow;
 }
-
 #search{
     display: flex;
     flex-direction: row;
@@ -73,18 +75,6 @@ h1{
     align-items: center;
     position: relative;
 }
-
-.searchMain, .searchDesc{
-    width: 40%;
-    height: 80vh;
-}
-.searchMain{
-    background-color: aqua;
-}
-.searchDesc{
-    background-color: hotpink;
-}
-
 @keyframes arrow {
     0% {
       opacity: 1;
