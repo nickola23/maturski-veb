@@ -38,6 +38,7 @@ section{
     transform: translateX(0) !important;
     opacity:1 !important;
 }
+
 .title{
     position: absolute;
     width: 100%;
