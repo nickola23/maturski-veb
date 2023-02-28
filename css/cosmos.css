@@ -1,0 +1,96 @@
+main{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+section{
+    display: flex;
+    min-height: 100vh;
+    height: auto;
+    position: relative;
+}
+
+.title{
+    position: absolute;
+    width: 100%;
+    top: 30%;
+    text-align: center;
+    color: #fff;
+}
+
+h1{
+    font-size: 48px;
+    letter-spacing: 20px;
+    text-transform: uppercase;
+}
+
+#header{
+    background-image:linear-gradient(180deg, #000000a8, #000000), url(../images/cosmos.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: black;
+}
+
+.arrow, .arrow:before {
+    position: absolute;
+    left: 50%;
+}
+
+.arrow {
+    width: 20px;
+    height: 20px;
+    bottom: 50px;
+    margin: -20px 0 0 -20px;
+    transform: rotate(45deg);
+    border: none;
+    border-right: 2px #fff solid;
+    border-bottom: 2px #fff solid;
+    cursor: pointer;
+}
+  
+.arrow:before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    margin: -10px 0 0 -10px;
+    border-right: 1px #fff solid;
+    border-bottom: 1px #fff solid;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-name: arrow;
+}
+
+#search{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.searchMain, .searchDesc{
+    width: 40%;
+    height: 80vh;
+}
+.searchMain{
+    background-color: aqua;
+}
+.searchDesc{
+    background-color: hotpink;
+}
+
+@keyframes arrow {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: translate(-10px, -10px);
+    }
+}
