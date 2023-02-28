@@ -31,6 +31,7 @@ nav a{
     list-style-type: none;
     margin: 0;
     padding-top: 0;
+    transition: 1s;
 }
 .navul li{
     padding: 15px;
@@ -95,6 +96,50 @@ nav a{
     width: 100vw;
     animation: to-bottom 1s;
 }
+
+.nav-extend{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width:  30px;
+    border-radius: 5px;
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.295);
+    cursor: pointer;
+    
+}
+
+.nav-extend div{
+    width: 80%;
+    height: 3px;
+    max-height: 4px;
+    margin: 2px;
+    background-color: #fff;
+    border-radius: 2px;
+}
+
+@media only screen and (max-width:438px){
+    .nav-extend{
+        display: flex;
+    }
+    .navul:has(#planets){
+        display: none;
+        transform: translateY(-100%);
+        width: 100vw;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        backdrop-filter: blur(10px);
+        background-color: rgba(0, 0, 0, 0.295);
+    }
+    nav{
+        flex-wrap: wrap;
+    }
+}
+
 @keyframes to-bottom {
     0% {
         transform: translateY(-50%);

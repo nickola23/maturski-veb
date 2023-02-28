@@ -181,3 +181,18 @@ function isInViewport(element) {
             rect.bottom <0
         );
     }
+//=====================nav menu responsive===================
+let hidden = true;
+let navDrop = document.querySelector('.navul:has(#planets)');
+document.querySelector('.nav-extend').addEventListener('click', (event) => {
+    if(hidden){
+        navDrop.style.display = "flex";
+        setTimeout(() => navDrop.style.transform = "translateY(0)", 1);
+    }else{
+        navDrop.style.transform = "translateY(-150%)";
+        setTimeout(() => navDrop.style.display = "none", 800);
+        
+        
+    }
+    hidden = !hidden;
+})
