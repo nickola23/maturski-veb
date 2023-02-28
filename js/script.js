@@ -135,7 +135,7 @@ window.addEventListener('scroll', (event) =>{
 })
 
 //==================== nav drop click navigation ======================
-
+/*
 const section = window.innerWidth/9.2;
 
 document.querySelector('.navDrop').addEventListener('click', e =>{
@@ -161,7 +161,7 @@ document.querySelector('.navDrop').addEventListener('click', e =>{
     }
 
     
-})
+})*/
 
 //==================== back to top ======================
 
