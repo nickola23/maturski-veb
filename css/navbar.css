@@ -126,7 +126,7 @@ nav a{
     }
     .navul:has(#planets){
         display: none;
-        transform: translateY(-100%);
+        transform: translateY(-150%);
         width: 100vw;
         flex-direction: column;
         justify-content: center;
