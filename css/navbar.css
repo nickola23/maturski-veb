@@ -203,8 +203,16 @@ footer .social{
     color: #fff;
     text-decoration: none;
 }
+@media only screen and (max-width: 992px) {
+    .footerLinks{
+        flex-direction: column;
+    }
+    .footerLink h6::after{
+        display: none;
+    }
+}
 
-@media only screen and (max-width:438px){
+@media only screen and (max-width:600px){
     .nav-extend{
         display: flex;
     }

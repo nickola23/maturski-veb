@@ -50,7 +50,9 @@ section{
 h1{
     font-size: 48px;
     letter-spacing: 20px;
+    font-weight: bold;
     text-transform: uppercase;
+    font-family: 'Nunito Sans', sans-serif;
 }
 
 video{
@@ -326,10 +328,6 @@ section video {
     .contextDescLeft .contextFact span{
         text-align: left;
     }
-}
-
-@media only screen and (max-width: 600px) {
-    
 }
 
 @media only screen and (max-width: 600px) {

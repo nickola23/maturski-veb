@@ -1,12 +1,11 @@
-
-    //====================== navbar animation =============================
+//====================== navbar animation =============================
     if(scroll > window.innerHeight/3){
         document.querySelector(`.navbar`).classList.add(`display`);
     }
     else{
         document.querySelector(`.navbar`).classList.remove(`display`);
     }
-    //==================== video play pause=====================
+//==================== video play pause=====================
 
  
 //==================== back to top ======================
