@@ -1,5 +1,5 @@
 
-
+let navVisible = false;
 window.addEventListener('scroll', (event) =>{
     let scroll = window.scrollY;
 
@@ -52,6 +52,21 @@ document.querySelector('.navDrop').addEventListener('click', e =>{
       toTop.classList.remove("active");
       }
     })
+//=====================nav menu responsive===================
+let hidden = true;
+let navDrop = document.querySelector('.navul:has(#planets)');
+document.querySelector('.nav-extend').addEventListener('click', (event) => {
+    if(hidden){
+        navDrop.style.display = "flex";
+        setTimeout(() => navDrop.style.transform = "translateY(0)", 1);
+    }else{
+        navDrop.style.transform = "translateY(-150%)";
+        setTimeout(() => navDrop.style.display = "none", 800);
+
+
+    }
+    hidden = !hidden;
+})
 /*
 function isInViewport(element) {
         const rect = element.getBoundingClientRect();
