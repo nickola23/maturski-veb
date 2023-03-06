@@ -48,10 +48,9 @@ section{
 }
 
 h1{
-    font-size: 48px;
-    letter-spacing: 20px;
+    font-size: 64px;
+    letter-spacing: 10px;
     font-weight: bold;
-    text-transform: uppercase;
     font-family: 'Nunito Sans', sans-serif;
 }
 
