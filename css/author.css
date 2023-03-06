@@ -1,0 +1,131 @@
+section{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    height: auto;
+    position: relative;
+}
+.contentDesc{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 200px;
+    min-height: 80vh;
+}
+.contentMain{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 100%;
+}
+.profilePhoto{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-image: url(../images/cosmos.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    transition: all ease-in-out 0.5s;
+}
+.luk{
+    background-image: url(../images/luk.jpg);
+}
+.luk:hover{
+    background-image: linear-gradient(90deg, rgba(0,0,0,0.4514180672268907) 0%, rgba(0,0,0,0.4542191876750701) 100%), url(../images/luk.jpg);
+}
+.luka{
+    display: none;
+}
+.nik{
+    background-image: url(../images/nik.jpg);
+}
+.nik:hover{
+    background-image: linear-gradient(90deg, rgba(0,0,0,0.4514180672268907) 0%, rgba(0,0,0,0.4542191876750701) 100%), url(../images/nik.jpg); 
+}
+.nick{
+    display: none;
+}
+.context{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 60vh;
+    border: 2px solid white;
+    border-radius: 20px;
+}
+.contextBox{
+    display: flex;
+    flex-direction: row !important;
+    height: 90%;
+}
+.contextMain{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: right;
+    width: 30%;
+    height: calc(100% - 60px);
+    margin: 30px 30px 0 0;
+    border-right: 3px solid #fff;
+}
+.contextMainTitle{
+    width: 65%;
+    font-size: 32px;
+    font-weight: bold;
+    color: #fff;
+    letter-spacing: 2px;
+    line-height: 30px;
+}
+.contextMainText{
+    width: 65%;
+    padding-top: 20px;
+    margin-bottom: auto;
+    height: fit-content;
+    text-align: justify;
+}
+.contextDescRight{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: auto;
+    width: 60%;
+    height: calc(100% - 60px);
+    margin: 30px 30px 30px 0;
+    margin-left: 10px;
+}
+.contextFact{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    height: fit-content;
+}
+.contextFact span{
+    margin-left: 15px;
+}
+.factNumber{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 50px;
+    min-height: 50px;
+    border-radius: 50%;
+    font-size: 24px;
+    background-color: #1b1b1b;
+}
+.def .contextBox{
+    justify-content: center;
+    align-items: center;
+}
