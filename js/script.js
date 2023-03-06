@@ -21,11 +21,19 @@ window.addEventListener('scroll', (event) =>{
 })
 const align = () => {
     if(window.innerWidth>513)
-    sections.forEach(section =>{
-        let sectionRect = section.getBoundingClientRect();
-        let center = (sectionRect.top +sectionRect.height/2)
-        if(center<window.innerHeight && center>0){
-            section.scrollIntoView(true,{behavior: "smooth"})
+    sections.forEach((section,index) =>{
+        if(index <sections.length-1){
+            let sectionRect = section.getBoundingClientRect();
+            let center = (sectionRect.top +sectionRect.height/2)
+            if(center<window.innerHeight && center>0){
+                section.scrollIntoView(true,{behavior: "smooth"})
+            }
+        }else{
+            let sectionRect = section.getBoundingClientRect();
+            let center = (sectionRect.top +sectionRect.height/2)
+            if(center<window.innerHeight && center>(window.innerHeight/2)){
+                section.scrollIntoView(true,{behavior: "smooth"})
+            }
         }
     })
 }
