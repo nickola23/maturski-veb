@@ -21,7 +21,31 @@ search.addEventListener('keyup', () => {
         }else{
             description.innerHTML = descriptionStrings[index];
         }
-        
     })
 })
 
+//=====================================planets image navigation================================
+const section = document.querySelector('.planets').getBoundingClientRect().width/9.2;
+document.querySelector('.planets').addEventListener('click', e =>{
+    let mouseY = e.clientX;
+    const sectionNum = mouseY /section;
+    if(sectionNum<1){
+        window.location.href = '../index.html#mercurySec';
+    }else if(sectionNum<2){
+        window.location.href = '../index.html#venusSec';
+    }else if(sectionNum<3){
+        window.location.href = '../index.html#earthSec';
+    }else if(sectionNum<4){
+        window.location.href = '../index.html#marsSec';
+    }else if(sectionNum<5){
+        window.location.href = '../index.html#jupiterSec';
+    }else if(sectionNum<7.2){
+        window.location.href = '../index.html#saturnSec';
+    }else if(sectionNum<8.2){
+        window.location.href = '../index.html#uranusSec';
+    }else{
+        window.location.href = '../index.html#neptuneSec';
+    }
+
+    
+})
