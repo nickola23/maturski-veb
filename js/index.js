@@ -106,6 +106,7 @@ window.addEventListener('scroll', (event) =>{
             content.classList.add("animate");
         }
     })
+    //=============================video play/pause =============================
     videos.forEach((video) => {
         
         if(isInViewport(video)){
@@ -123,6 +124,8 @@ window.addEventListener('scroll', (event) =>{
             
         }
     })
+    
+
 })
 
 //==================== nav drop click navigation ======================

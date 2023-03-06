@@ -73,6 +73,7 @@ h1{
 }
 .highlighted{
     background-color: rgb(117, 117, 0);
+    text-transform: uppercase;
 }
 .arrow {
     width: 20px;

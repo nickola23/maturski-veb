@@ -5,17 +5,23 @@ const titleStrings = [];
 const descriptionStrings = []
 titles.forEach(title => titleStrings.push(title.textContent));
 descriptions.forEach(desc => descriptionStrings.push(desc.textContent));
-console.log(titleStrings);
-console.log(descriptionStrings);
 
-search.addEventListener('change', () => {
-    console.log(titleStrings);
+search.addEventListener('keyup', () => {
     titles.forEach((title,index) =>{
         if(search.value !== ""){
-            title.innerHTML = titleStrings[index].replace(new RegExp(search.value,"ig"),'<span class="highlighted">'+search.value.toUpperCase()+'</span>');
+            title.innerHTML = titleStrings[index].replace(new RegExp(search.value,"ig"),'<span class="highlighted">'+search.value+'</span>');
         }else{
             title.innerHTML = titleStrings[index];
         }
         
     })
+    descriptions.forEach((description,index) =>{
+        if(search.value !== ""){
+            description.innerHTML = descriptionStrings[index].replace(new RegExp(search.value,"ig"),'<span class="highlighted">'+search.value+'</span>');
+        }else{
+            description.innerHTML = descriptionStrings[index];
+        }
+        
+    })
 })
+

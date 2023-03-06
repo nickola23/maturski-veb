@@ -1,9 +1,8 @@
-
+let timeout;
+const sections = document.querySelectorAll('section');
 let navVisible = false;
 window.addEventListener('scroll', (event) =>{
     let scroll = window.scrollY;
-
-
     //====================== navbar animation =============================
     if(scroll > window.innerHeight/3){
         document.querySelector(`.navbar`).classList.add(`display`);
@@ -11,8 +10,25 @@ window.addEventListener('scroll', (event) =>{
     else{
         document.querySelector(`.navbar`).classList.remove(`display`);
     }
+    //============================align with section============================
+    if(timeout){
+        clearTimeout(timeout);   
+    }
+    timeout = setTimeout(align, 50)
+    /*
     
+    })*/
 })
+const align = () => {
+    if(window.innerWidth>513)
+    sections.forEach(section =>{
+        let sectionRect = section.getBoundingClientRect();
+        let center = (sectionRect.top +sectionRect.height/2)
+        if(center<window.innerHeight && center>0){
+            section.scrollIntoView(true,{behavior: "smooth"})
+        }
+    })
+}
 /*
 //==================== nav drop click navigation ======================
 
