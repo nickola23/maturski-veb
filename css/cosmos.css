@@ -71,6 +71,9 @@ h1{
     position: absolute;
     left: 50%;
 }
+.highlighted{
+    background-color: rgb(117, 117, 0);
+}
 .arrow {
     width: 20px;
     height: 20px;
