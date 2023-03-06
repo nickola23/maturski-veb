@@ -22,13 +22,11 @@ videos.forEach((video) => {
         if(video.playing){
             video.pause();
             video.playing = false;
-            console.log(`${video.id}- video paused`)
         }
     }else{
         if(!video.playing){
             video.play();
             video.playing = true;
-            console.log(`${video.id}- video playing`)
         }
         
     }
@@ -113,13 +111,11 @@ window.addEventListener('scroll', (event) =>{
             if(video.playing){
                 video.pause();
                 video.playing = false;
-                console.log(`${video.id}- video paused`)
             }
         }else{
             if(!video.playing){
                 video.play();
                 video.playing = true;
-                console.log(`${video.id}- video playing`)
             }
             
         }
