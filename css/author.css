@@ -22,6 +22,7 @@ section{
     align-items: center;
     width: 80%;
     height: 100%;
+    transition: 0.5s;
 }
 .profilePhoto{
     position: relative;
@@ -43,6 +44,7 @@ section{
 }
 .luka{
     display: none;
+    transform: translateX(80vw);
 }
 .nik{
     background-image: url(../images/nik.jpg);
@@ -52,6 +54,7 @@ section{
 }
 .nick{
     display: none;
+    transform: translateX(80vw);
 }
 .context{
     display: flex;
