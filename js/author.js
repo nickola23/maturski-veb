@@ -9,18 +9,18 @@ nikola.style.width = "80%"
 author.style.width = "80%"
 document.querySelector(`.luk`).addEventListener('mouseover', e => {
     if(startDisplay){
-        author.style.transform = 'translateX(-80vw)';
+        author.style.transform = 'translateY(-80vh)';
         setTimeout(() =>{
             author.style.display = "none";
         },500)
         startDisplay = false;
     }
     if(nikolaDisplay) {
-        nikola.style.transform = 'translateX(-80vw)';
+        nikola.style.transform = 'translateY(-80vh)';
         setTimeout(() =>{
             nikola.style.display = "none";
             nikola.style.transition = 'none';
-            nikola.style.transform = 'translateX(80vw)';
+            nikola.style.transform = 'translateY(80vh)';
             nikola.style.transition = '1s'
         },500)
         
@@ -30,7 +30,7 @@ document.querySelector(`.luk`).addEventListener('mouseover', e => {
         if(!lukaDisplay){
             luka.style.display = "flex";
             setTimeout(() =>{
-                luka.style.transform = "translateX(0)";
+                luka.style.transform = "translateY(0)";
             },50)
             lukaDisplay = true;
         }
@@ -40,18 +40,18 @@ document.querySelector(`.luk`).addEventListener('mouseover', e => {
 
 document.querySelector('.nik').addEventListener('mouseover', e =>{
     if(startDisplay){
-        author.style.transform = 'translateX(-80vw)';
+        author.style.transform = 'translateY(-80vh)';
         setTimeout(() =>{
             author.style.display = "none";
         },500)
         startDisplay = false;
     }
     if(lukaDisplay) {
-        luka.style.transform = 'translateX(-80vw)';
+        luka.style.transform = 'translateY(-80vh)';
         setTimeout(() =>{
             luka.style.display = "none";
             luka.style.transition = 'none';
-            luka.style.transform = 'translateX(80vw)';
+            luka.style.transform = 'translateY(80vh)';
             luka.style.transition = '1s'
         },500)
         
@@ -61,7 +61,7 @@ document.querySelector('.nik').addEventListener('mouseover', e =>{
         if(!nikolaDisplay){
             nikola.style.display = "flex";
             setTimeout(() =>{
-                nikola.style.transform = "translateX(0)";
+                nikola.style.transform = "translateY(0)";
             },50)
             nikolaDisplay = true;
         }

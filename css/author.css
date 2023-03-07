@@ -44,7 +44,7 @@ section{
 }
 .luka{
     display: none;
-    transform: translateX(80vw);
+    transform: translateY(80vh);
 }
 .nik{
     background-image: url(../images/nik.jpg);
@@ -54,7 +54,7 @@ section{
 }
 .nick{
     display: none;
-    transform: translateX(80vw);
+    transform: translateY(80vh);
 }
 .context{
     display: flex;
@@ -63,6 +63,7 @@ section{
     height: 60vh;
     border: 2px solid white;
     border-radius: 20px;
+    z-index: 1;
 }
 .contextBox{
     display: flex;
@@ -131,4 +132,79 @@ section{
 .def .contextBox{
     justify-content: center;
     align-items: center;
+}
+@media only screen and (max-width: 1366px) {
+    .content{
+        width: 100%;
+    }
+    .context{
+        background-color: rgba(0,0,0, 0.5);
+        backdrop-filter: blur(10px);
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .content{
+        margin-top: 90px;
+        height: fit-content;
+        margin-bottom: 90px;
+    }
+    .contentMain, .contentDesc{
+        width: 80%;
+        height: fit-content;
+    }
+    section{
+        flex-direction: column;
+    }
+    iframe{
+        width: 100%;
+    }
+    .planets{
+        display: none;
+    }
+    .descDesc{
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .contextBox{
+        flex-direction: column !important;
+    }
+    .contextMain{
+        width: 100%;
+        border: none;
+    }
+    .contextMain .contextMainTitle{
+        text-align: left;
+    }
+    .contextDesc, .contextDescRight{
+        width: 90%;
+    }
+    .contextDescLeft .contextFact span{
+        text-align: left;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .title{
+        font-size: 44px;
+    }
+    .desc{
+        padding-right: 0;
+    }
+    .context{
+        height: fit-content;
+    }
+}
+
+@keyframes arrow {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: translate(-10px, -10px);
+    }
 }
