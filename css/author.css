@@ -166,6 +166,12 @@ section{
         width: 100%;
         margin-top: 20px;
     }
+    .luka{
+        transform: translatex(80vh);
+    }
+    .nick{
+        transform: translatex(80vh);
+    }
 }
 
 @media only screen and (max-width: 768px) {
