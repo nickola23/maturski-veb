@@ -105,6 +105,7 @@ nav a{
     height: 30px;
     width:  30px;
     border-radius: 5px;
+    margin: 15px;
     backdrop-filter: blur(10px);
     background-color: rgba(0, 0, 0, 0.295);
     cursor: pointer;
