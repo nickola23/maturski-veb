@@ -231,8 +231,14 @@ footer .social{
         backdrop-filter: blur(10px);
         background-color: rgba(0, 0, 0, 0.295);
     }
+    .display{
+        padding-bottom: 15px;
+        backdrop-filter: blur(10px);
+        background-color: rgba(0, 0, 0, 0.295);
+    }
     nav{
         flex-wrap: wrap;
+        
     }
 }
 
