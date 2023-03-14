@@ -183,9 +183,14 @@ iframe{
 @media only screen and (max-width: 600px) {
     .title{
         font-size: 44px;
+        margin-top: 15px;
+        margin-bottom: 5px;
     }
     .desc{
         padding-right: 0;
+    }
+    input[type="text"]{
+        width: 100px;
     }
 }
 

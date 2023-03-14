@@ -93,7 +93,6 @@ section{
     padding-top: 20px;
     margin-bottom: auto;
     height: fit-content;
-    text-align: justify;
 }
 .contextDescRight{
     display: flex;
@@ -196,6 +195,12 @@ section{
 @media only screen and (max-width: 600px) {
     .title{
         font-size: 44px;
+    }
+    h1{
+        padding: 10px;
+        padding-top: 55px;
+        padding-bottom: 55px;
+        text-align: center;
     }
     .desc{
         padding-right: 0;

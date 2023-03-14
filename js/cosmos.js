@@ -49,3 +49,7 @@ document.querySelector('.planets').addEventListener('click', e =>{
 
     
 })
+
+if(window.innerWidth < 600){
+    document.querySelector(`#search`).placeholder = `Search`;
+}
