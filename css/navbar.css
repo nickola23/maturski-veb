@@ -109,7 +109,7 @@ nav a{
     margin-left: 0;
     margin-right: 0;
     backdrop-filter: blur(10px);
-    background-color: rgba(0, 0, 0, 0.295);
+    background-color: rgba(0, 0, 0, 0.658);
     cursor: pointer;
     
 }
@@ -228,11 +228,6 @@ footer .social{
         justify-content: center;
         align-items: center;
         border-radius: 10px;
-        backdrop-filter: blur(10px);
-        background-color: rgba(0, 0, 0, 0.295);
-    }
-    .display{
-        padding-bottom: 15px;
         backdrop-filter: blur(10px);
         background-color: rgba(0, 0, 0, 0.295);
     }
